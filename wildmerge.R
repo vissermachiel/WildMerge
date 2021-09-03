@@ -153,10 +153,21 @@ wildmerge <- function(data1, data2, include = "USUBJID", exclude = NULL) {
 }
 
 out <- wildmerge(
-  data1   = readxl::read_excel("reconciliation_data3.xlsx", sheet = "crf_vs"), 
-  data2   = readxl::read_excel("reconciliation_data3.xlsx", sheet = "ext_vs"),
+  data1   = readxl::read_excel("data.xlsx", sheet = "crf_vs"), 
+  data2   = readxl::read_excel("data.xlsx", sheet = "ext_vs"),
   include = c("USUBJID", "VISIT"),
   exclude = c("SEQ", "STUDYID")
 )
 
 out
+
+out$data1
+out$data2
+out$cols_in
+out$cols_out
+out$keys_list
+out$keys_df
+out$merges_list
+out$iterative_merge
+out$final_merge
+out$differences
